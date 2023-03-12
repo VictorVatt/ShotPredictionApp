@@ -1,6 +1,6 @@
 import sys
-import time
-
+from timer import Timer
+from PySide6 import QtCore
 from PySide6.QtWidgets import QApplication, QMainWindow
 from PySide6.QtCore import QFile, QTimer, QTime
 from src import interface
@@ -13,19 +13,10 @@ class MainWindow(QMainWindow):
         self.isRecording = False
         self.ui = interface.Ui_mainWindow()
         self.ui.setupUi(self)
-        self.timer = QTimer(self)
-        self.timer.timeout.connect(self.showTime)
-        self.ui.recordButton.clicked.connect(self.startTimer)
-    def showTime(self):
-        t = QTime(0, 0, 0).addSecs(1)
-        text = t.toString("hh:mm:ss")
-        self.ui.timer_ldc.display(text)
+        self.timer = Timer(self.ui)
+        self.ui.recordButton.clicked.connect(self.timer.startTimer)
 
-    def startTimer(self):
-        self.timer.start(1)
-
-    def endTimer(self):
-        self.timer.stop()
+    def handleRecording(self):
 
 
 if __name__ == "__main__":
