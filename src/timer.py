@@ -9,6 +9,9 @@ class Timer:
         self.timer = QTimer()
         self.curr_time = QtCore.QTime(0, 0, 0)
         self.timer.timeout.connect(self.showTime)
+        self.ui.startRecord.clicked.connect(self.startTimer)
+        self.ui.stopRecord.clicked.connect(self.endTimer)
+        self.ui.resetRecord.clicked.connect(self.resetTimer)
 
     def showTime(self):
         self.curr_time = self.curr_time.addSecs(1)
@@ -20,3 +23,8 @@ class Timer:
 
     def endTimer(self):
         self.timer.stop()
+
+    def resetTimer(self):
+        self.curr_time = QtCore.QTime(0, 0, 0)
+        time = self.curr_time.toString("hh:mm:ss")
+        self.ui.timer_ldc.display(time)
