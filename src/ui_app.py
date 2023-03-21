@@ -156,7 +156,7 @@ class Ui_mainWindow(object):
         self.mode_record.setText(QCoreApplication.translate("mainWindow", u"Mode d'enregistrement :", None))
         self.results_label.setText(QCoreApplication.translate("mainWindow", u"Resultats", None))
         self.startRecord.setText(QCoreApplication.translate("mainWindow", u"Start recording", None))
-        self.resetRecord.setText(QCoreApplication.translate("mainWindow", u"Reset recording", None))
+        self.resetRecord.setText(QCoreApplication.translate("mainWindow", u"Voir résultats", None))
         self.stopRecord.setText(QCoreApplication.translate("mainWindow", u"Stop recording", None))
         self.timer_label.setText(QCoreApplication.translate("mainWindow", u"Timer ", None))
         self.connetionBtn_2.setText(QCoreApplication.translate("mainWindow", u"Connexion IMU", None))

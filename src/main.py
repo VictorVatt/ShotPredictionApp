@@ -15,11 +15,11 @@ class MainWindow(QMainWindow):
         self.ui = Ui_mainWindow()
         self.ui.setupUi(self)
         self.timer = Timer(self.ui)
-        self.thread = QThread()
+        self.connectIMU_thread = QThread()
         self.imu_connection = IMU_connection(self.ui)
-        self.imu_connection.moveToThread(self.thread)
+        self.imu_connection.moveToThread(self.connectIMU_thread)
         self.ui.connetionBtn_2.clicked.connect(self.imu_connection.run)
-        self.thread.start()
+        self.connectIMU_thread.start()
 
 
 if __name__ == "__main__":
