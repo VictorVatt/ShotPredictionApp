@@ -1,11 +1,13 @@
+import os
 import sys
+import shutil
 from timer import Timer
-from PySide6 import QtCore
-from PySide6.QtWidgets import QApplication, QMainWindow, QDialog
-from PySide6.QtCore import QFile, QTimer, QTime, QThread, Signal
+import PySide6
+from PySide6.QtWidgets import QApplication, QMainWindow
 from ui_app import Ui_mainWindow
 from imu_connetion import IMU_connection
 from Model import Model
+from Prediction import Prediction
 
 
 class MainWindow(QMainWindow):
@@ -25,12 +27,24 @@ class MainWindow(QMainWindow):
         self.imu_connection = IMU_connection(self.ui)
         self.ui.connetionBtn_2.clicked.connect(self.startIMUConnectionThread)
 
+        self.ui.resetRecord.clicked.connect(self.new_prediction)
+
     def onModelThreadEnd(self):
         self.ui.message_connexion_2.setStyleSheet(u"color: rgb(40, 132, 0);\n""font: 11pt \"MS Shell Dlg 2\";")
         self.ui.message_connexion_2.setText("Model OK")
 
     def startIMUConnectionThread(self):
         self.imu_connection.start()
+
+    def new_prediction(self):
+        prediction = Prediction(self.model)
+        if prediction.file is not None:
+            file = prediction.formatFile()
+
+    def closeEvent(self, event: PySide6.QtGui.QCloseEvent):
+        path = "Trials/"
+        shutil.rmtree(path)
+        os.mkdir(path)
 
 
 if __name__ == "__main__":
