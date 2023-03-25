@@ -9,7 +9,7 @@ class Model(QThread):
     finished_signal = Signal() #
     def __init__(self):
         super().__init__()
-
+        self.classifier = None
     def run(self):
         data = pd.read_csv("data/training_dataset")
         data.drop(457, axis=0, inplace=True)
@@ -29,5 +29,5 @@ class Model(QThread):
         print("Accuracy : ", accuracy_score(Y_test, y_pred))
         print("Precision : ", precision_score(Y_test, y_pred, average='weighted', zero_division=1))
         print("__________________")
-        self.finished_signal.emit()
+        self.classifier = clf
         return clf

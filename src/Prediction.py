@@ -2,7 +2,7 @@ import os
 import numpy as np
 import pandas as pd
 from scipy.signal import find_peaks
-from data.model_settings import cols_labels, frequence, intervalle, pourcentage_max, LP_filter
+from data.model_settings import *
 
 
 def recover_file():
@@ -20,14 +20,22 @@ class Prediction:
         self.model = model
         self.file = recover_file()
 
-    def formatFile(self):
+    def formatFile(self, intervalle = intervalle):
         new_shot_data = pd.read_csv(f"Trials/{self.file}", skiprows=range(0,1), usecols=range(8, 14))
         new_shot_data.columns = ["AccX", "AccY", "AccZ", "GyrX", "GyrY", "GyrZ"]
         new_shot_data = new_shot_data.dropna()
         maxX = np.max(new_shot_data["AccX"])
         seuil_max = maxX * pourcentage_max / 100
         AccX_peaks = find_peaks(new_shot_data["AccX"], height=seuil_max, distance=40)
-        print(AccX_peaks[0])
+        if (AccX_peaks[0][0]) <= intervalle:
+            intervalle = (AccX_peaks[0][0])
+        if (len(new_shot_data) - AccX_peaks[0][-1]) <= intervalle:
+            intervalle = (len(new_shot_data) - AccX_peaks[0][-1])
+        peaks = AccX_peaks[0]
+        new_shot_data = createShotDF(new_shot_data, peaks)
+        new_shot_data = new_shot_data.dropna()
+        return new_shot_data
 
-    def predict(self):
-        pass
+    def predictShot(self, shotData):
+        typeshot = self.model.classifier.predict(shotData)
+        return typeshot

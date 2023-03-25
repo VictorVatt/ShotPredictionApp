@@ -40,6 +40,9 @@ class MainWindow(QMainWindow):
         prediction = Prediction(self.model)
         if prediction.file is not None:
             file = prediction.formatFile()
+            SHOTS = prediction.predictShot(file)
+            print(SHOTS)
+
 
     def closeEvent(self, event: PySide6.QtGui.QCloseEvent):
         path = "Trials/"
