@@ -15,10 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QGraphicsView, QGroupBox,
+from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QGroupBox,
     QLCDNumber, QLabel, QListWidget, QListWidgetItem,
     QPushButton, QRadioButton, QSizePolicy, QWidget)
-#import image_rc
 
 class Ui_mainWindow(object):
     def setupUi(self, mainWindow):
@@ -88,10 +87,6 @@ class Ui_mainWindow(object):
         self.results_label.setStyleSheet(u"color: rgb(255, 255, 255);\n"
 "font: 75 20pt \"Sharp Sans Display No2\";\n"
 "")
-        self.results_graph = QGraphicsView(mainWindow)
-        self.results_graph.setObjectName(u"results_graph")
-        self.results_graph.setGeometry(QRect(310, 560, 871, 211))
-        self.results_graph.setStyleSheet(u"border: 1px solid rgb(255, 255, 255);")
         self.startRecord = QPushButton(mainWindow)
         self.startRecord.setObjectName(u"startRecord")
         self.startRecord.setGeometry(QRect(310, 780, 271, 61))
@@ -147,9 +142,15 @@ class Ui_mainWindow(object):
 "background-color: rgb(213, 220, 60);")
         self.message_connexion_2 = QLabel(mainWindow)
         self.message_connexion_2.setObjectName(u"message_connexion_2")
-        self.message_connexion_2.setGeometry(QRect(970, 570, 201, 21))
+        self.message_connexion_2.setGeometry(QRect(980, 530, 201, 21))
         self.message_connexion_2.setStyleSheet(u"color: rgb(193, 78, 78);\n"
 "font: 11pt \"MS Shell Dlg 2\";")
+        self.gridLayoutWidget = QWidget(mainWindow)
+        self.gridLayoutWidget.setObjectName(u"gridLayoutWidget")
+        self.gridLayoutWidget.setGeometry(QRect(310, 560, 871, 211))
+        self.gridLayout = QGridLayout(self.gridLayoutWidget)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setContentsMargins(0, 0, 0, 0)
 
         self.retranslateUi(mainWindow)
 

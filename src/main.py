@@ -8,6 +8,7 @@ from ui_app import Ui_mainWindow
 from imu_connetion import IMU_connection
 from Model import Model
 from Prediction import Prediction
+from Plot import Plot
 
 
 class MainWindow(QMainWindow):
@@ -42,6 +43,9 @@ class MainWindow(QMainWindow):
             file = prediction.formatFile()
             SHOTS = prediction.predictShot(file)
             print(SHOTS)
+            plot = Plot(self.ui, SHOTS)
+            plot.create_pie_chart()
+            plot.create_bar_chart()
 
 
     def closeEvent(self, event: PySide6.QtGui.QCloseEvent):

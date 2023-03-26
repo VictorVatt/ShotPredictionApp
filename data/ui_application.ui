@@ -236,19 +236,6 @@ font: 75 20pt &quot;Sharp Sans Display No2&quot;;
     <string>Resultats</string>
    </property>
   </widget>
-  <widget class="QGraphicsView" name="results_graph">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>560</y>
-     <width>871</width>
-     <height>211</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border: 1px solid rgb(255, 255, 255);</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="startRecord">
    <property name="geometry">
     <rect>
@@ -410,8 +397,8 @@ background-color: rgb(213, 220, 60);</string>
   <widget class="QLabel" name="message_connexion_2">
    <property name="geometry">
     <rect>
-     <x>970</x>
-     <y>570</y>
+     <x>980</x>
+     <y>530</y>
      <width>201</width>
      <height>21</height>
     </rect>
@@ -423,6 +410,17 @@ font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
    <property name="text">
     <string>Chargement du model ...</string>
    </property>
+  </widget>
+  <widget class="QWidget" name="gridLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>560</y>
+     <width>871</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout"/>
   </widget>
  </widget>
  <resources>
