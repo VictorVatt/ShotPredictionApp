@@ -60,6 +60,11 @@ class IMU_connection(QThread):
 
             self.ui.message_connexion.setStyleSheet(u"color: rgb(40, 132, 0);")
             self.ui.message_connexion.setText(f"IMU : {address} Connecté") # set the connection message
+            self.ui.adresseMac.setText(f"Adresse MAC : {address}")
+            self.ui.connexion_statut.setText(f"Statut de connexion : Connecté")
+            self.ui.file_path.setText("Emplacement fichiers : /Trials")
+            self.ui.mode_record.setText("Mode d'enregistrement : HighFidelity")
+
             self.device = self.manager.device(portInfo.deviceId()) #create the device with the manager
 
             # connect the start button for recording to the method

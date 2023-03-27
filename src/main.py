@@ -31,7 +31,7 @@ class MainWindow(QMainWindow):
         self.ui.resetRecord.clicked.connect(self.new_prediction)
 
     def onModelThreadEnd(self):
-        self.ui.message_connexion_2.setStyleSheet(u"color: rgb(40, 132, 0);\n""font: 11pt \"MS Shell Dlg 2\";")
+        self.ui.message_connexion_2.setStyleSheet(u"color: rgb(40, 132, 0);\n""font: 75 11pt \"Sharp Sans\";")
         self.ui.message_connexion_2.setText("Model OK")
 
     def startIMUConnectionThread(self):
@@ -44,8 +44,8 @@ class MainWindow(QMainWindow):
             SHOTS = prediction.predictShot(file)
             print(SHOTS)
             plot = Plot(self.ui, SHOTS)
-            plot.create_pie_chart()
-            plot.create_bar_chart()
+            plot.create_charts()
+
 
 
     def closeEvent(self, event: PySide6.QtGui.QCloseEvent):

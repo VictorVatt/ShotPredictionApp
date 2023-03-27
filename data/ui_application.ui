@@ -7,13 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>1200</width>
-    <height>854</height>
+    <height>581</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>581</height>
+   </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>1200</width>
-    <height>854</height>
+    <height>581</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -36,7 +42,7 @@
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(255, 255, 255);
-font: 75 16pt &quot;Sharp Sans Display No2&quot;;</string>
+font: 75 16pt &quot;Sharp Sans&quot;;</string>
    </property>
    <property name="title">
     <string>Latéralité</string>
@@ -51,8 +57,7 @@ font: 75 16pt &quot;Sharp Sans Display No2&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 8pt &quot;Sharp Sans Display No2&quot;;
-font: 75 14pt &quot;Sharp Sans Display No2&quot;;</string>
+     <string notr="true">font: 75 11pt &quot;Sharp Sans&quot;;</string>
     </property>
     <property name="text">
      <string>Droitier</string>
@@ -68,8 +73,7 @@ font: 75 14pt &quot;Sharp Sans Display No2&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 75 8pt &quot;Sharp Sans Display No2&quot;;
-font: 75 14pt &quot;Sharp Sans Display No2&quot;;</string>
+     <string notr="true">font: 75 11pt &quot;Sharp Sans&quot;;</string>
     </property>
     <property name="text">
      <string>Gaucher</string>
@@ -79,15 +83,16 @@ font: 75 14pt &quot;Sharp Sans Display No2&quot;;</string>
   <widget class="QLabel" name="title">
    <property name="geometry">
     <rect>
-     <x>400</x>
+     <x>370</x>
      <y>20</y>
-     <width>441</width>
+     <width>501</width>
      <height>71</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 75 36pt &quot;Sharp Sans Display No2&quot;;
-color: rgb(213, 220, 60);</string>
+    <string notr="true">font: 75 36pt &quot;Sharp Sans&quot;;
+color: rgb(213, 220, 60);
+text-align:center;</string>
    </property>
    <property name="text">
     <string>TennisPrediction</string>
@@ -110,7 +115,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; color:#aa0000;&quot;&gt;Informations générale sur l'IMU connecté&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 75 14pt &quot;Sharp Sans Display No2&quot;;
+    <string notr="true">font: 75 16pt &quot;Sharp Sans&quot;;
 color: rgb(255, 255, 255);</string>
    </property>
    <property name="title">
@@ -119,10 +124,10 @@ color: rgb(255, 255, 255);</string>
    <widget class="QLabel" name="message_connexion">
     <property name="geometry">
      <rect>
-      <x>350</x>
-      <y>130</y>
-      <width>471</width>
-      <height>101</height>
+      <x>390</x>
+      <y>290</y>
+      <width>461</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -137,13 +142,12 @@ color: rgb(255, 255, 255);</string>
      <rect>
       <x>20</x>
       <y>50</y>
-      <width>221</width>
+      <width>371</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 7pt &quot;MS Shell Dlg 2&quot;;
-font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 75 11pt &quot;Sharp Sans&quot;;</string>
     </property>
     <property name="text">
      <string>Adresse MAC :</string>
@@ -153,14 +157,13 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>80</y>
-      <width>221</width>
+      <y>90</y>
+      <width>401</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 7pt &quot;MS Shell Dlg 2&quot;;
-font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 75 11pt &quot;Sharp Sans&quot;;</string>
     </property>
     <property name="text">
      <string>Statut de connexion :</string>
@@ -171,13 +174,12 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
      <rect>
       <x>20</x>
       <y>170</y>
-      <width>221</width>
+      <width>721</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 7pt &quot;MS Shell Dlg 2&quot;;
-font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 75 11pt &quot;Sharp Sans&quot;;</string>
     </property>
     <property name="text">
      <string>Version SDK :</string>
@@ -187,14 +189,13 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>140</y>
-      <width>221</width>
+      <y>210</y>
+      <width>451</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 7pt &quot;MS Shell Dlg 2&quot;;
-font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 75 11pt &quot;Sharp Sans&quot;;</string>
     </property>
     <property name="text">
      <string>Emplacement fichiers : </string>
@@ -204,51 +205,43 @@ font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>110</y>
-      <width>221</width>
+      <y>130</y>
+      <width>431</width>
       <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 7pt &quot;MS Shell Dlg 2&quot;;
-font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 75 11pt &quot;Sharp Sans&quot;;</string>
     </property>
     <property name="text">
      <string>Mode d'enregistrement :</string>
     </property>
    </widget>
   </widget>
-  <widget class="QLabel" name="results_label">
-   <property name="geometry">
-    <rect>
-     <x>310</x>
-     <y>510</y>
-     <width>211</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color: rgb(255, 255, 255);
-font: 75 20pt &quot;Sharp Sans Display No2&quot;;
-</string>
-   </property>
-   <property name="text">
-    <string>Resultats</string>
-   </property>
-  </widget>
   <widget class="QPushButton" name="startRecord">
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>780</y>
+     <y>500</y>
      <width>271</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:rgb(255, 255, 255);
-background-color: rgb(213, 220, 60);
-font: 22pt &quot;MS Shell Dlg 2&quot;;</string>
+    <string notr="true">QPushButton {
+    border-radius: 5px;
+    color: black;
+	font: 75 10pt &quot;Sharp Sans&quot;;
+	background-color: #DFFF4F;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #BCEB33;
+}
+
+QPushButton:pressed {
+    background-color: #BCEB33;
+    border-style: inset;
+}</string>
    </property>
    <property name="text">
     <string>START</string>
@@ -257,16 +250,27 @@ font: 22pt &quot;MS Shell Dlg 2&quot;;</string>
   <widget class="QPushButton" name="resetRecord">
    <property name="geometry">
     <rect>
-     <x>910</x>
-     <y>780</y>
+     <x>900</x>
+     <y>500</y>
      <width>271</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:rgb(255, 255, 255);
-background-color: rgb(213, 220, 60);
-font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
+    <string notr="true">QPushButton {
+    border-radius: 5px;
+    color: black;
+	font: 75 10pt &quot;Sharp Sans&quot;;
+	background-color: #DFFF4F;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #BCEB33;
+}
+
+QPushButton:pressed {
+    background-color: #BCEB33;
+    border-style: inset;
+}</string>
    </property>
    <property name="text">
     <string>Résultats</string>
@@ -275,16 +279,27 @@ font: 16pt &quot;MS Shell Dlg 2&quot;;</string>
   <widget class="QPushButton" name="stopRecord">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>780</y>
-     <width>271</width>
+     <x>600</x>
+     <y>500</y>
+     <width>281</width>
      <height>61</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:rgb(255, 255, 255);
-background-color: rgb(213, 220, 60);
-font: 22pt &quot;MS Shell Dlg 2&quot;;</string>
+    <string notr="true">QPushButton {
+    border-radius: 5px;
+    color: black;
+	font: 75 10pt &quot;Sharp Sans&quot;;
+	background-color: #DFFF4F;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #BCEB33;
+}
+
+QPushButton:pressed {
+    background-color: #BCEB33;
+    border-style: inset;
+}</string>
    </property>
    <property name="text">
     <string>STOP</string>
@@ -294,13 +309,14 @@ font: 22pt &quot;MS Shell Dlg 2&quot;;</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>560</y>
+     <y>420</y>
      <width>271</width>
      <height>141</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border: 1px solid rgb(255, 255, 255);</string>
+    <string notr="true">border: 1px solid rgb(255, 255, 255);
+border-radius: 5px;</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -319,6 +335,7 @@ font: 22pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">color: rgb(213, 220, 60);
+border-radius: 5px;
 </string>
     </property>
     <property name="value" stdset="0">
@@ -335,9 +352,9 @@ font: 22pt &quot;MS Shell Dlg 2&quot;;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);
-font: 75 20pt &quot;Sharp Sans Display No2&quot;;
-font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
+     <string notr="true">font: 75 16pt &quot;Sharp Sans&quot;;
+color: rgb(255, 255, 255);
+border-radius: 5px;</string>
     </property>
     <property name="text">
      <string>Timer </string>
@@ -348,15 +365,26 @@ font: 14pt &quot;MS Shell Dlg 2&quot;;</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>300</y>
+     <y>310</y>
      <width>271</width>
-     <height>61</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(213, 220, 60);</string>
+    <string notr="true">QPushButton {
+    border-radius: 5px;
+    color: black;
+	font: 75 10pt &quot;Sharp Sans&quot;;
+	background-color: #DFFF4F;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #BCEB33;
+}
+
+QPushButton:pressed {
+    background-color: #BCEB33;
+    border-style: inset;
+}</string>
    </property>
    <property name="text">
     <string>Connexion IMU</string>
@@ -372,7 +400,7 @@ background-color: rgb(213, 220, 60);</string>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">font: 14pt &quot;MS Shell Dlg 2&quot;;
+    <string notr="true">font: 75 13pt &quot;Sharp Sans&quot;;
 color: rgb(255, 255, 255);</string>
    </property>
   </widget>
@@ -380,15 +408,26 @@ color: rgb(255, 255, 255);</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>370</y>
+     <y>360</y>
      <width>271</width>
-     <height>61</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:rgb(255, 255, 255);
-font: 10pt &quot;MS Shell Dlg 2&quot;;
-background-color: rgb(213, 220, 60);</string>
+    <string notr="true">QPushButton {
+    border-radius: 5px;
+    color: black;
+	font: 75 10pt &quot;Sharp Sans&quot;;
+	background-color: #DFFF4F;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #BCEB33;
+}
+
+QPushButton:pressed {
+    background-color: #BCEB33;
+    border-style: inset;
+}</string>
    </property>
    <property name="text">
     <string>Déconnexion IMU</string>
@@ -397,34 +436,42 @@ background-color: rgb(213, 220, 60);</string>
   <widget class="QLabel" name="message_connexion_2">
    <property name="geometry">
     <rect>
-     <x>980</x>
-     <y>530</y>
-     <width>201</width>
+     <x>10</x>
+     <y>10</y>
+     <width>231</width>
      <height>21</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">color: rgb(193, 78, 78);
-font: 11pt &quot;MS Shell Dlg 2&quot;;</string>
+font: 75 11pt &quot;Sharp Sans&quot;;</string>
    </property>
    <property name="text">
     <string>Chargement du model ...</string>
    </property>
   </widget>
-  <widget class="QWidget" name="gridLayoutWidget">
+  <widget class="QLabel" name="logo">
    <property name="geometry">
     <rect>
-     <x>310</x>
-     <y>560</y>
-     <width>871</width>
-     <height>211</height>
+     <x>1050</x>
+     <y>0</y>
+     <width>131</width>
+     <height>121</height>
     </rect>
    </property>
-   <layout class="QGridLayout" name="gridLayout"/>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="root.qrc">:/Logo/logo_app.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
   </widget>
  </widget>
  <resources>
-  <include location="../../ShotPredictionIMU/data/image.qrc"/>
+  <include location="root.qrc"/>
  </resources>
  <connections/>
 </ui>
