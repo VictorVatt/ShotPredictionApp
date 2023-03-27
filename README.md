@@ -3,7 +3,7 @@
 Application des prédictions des coups au Tennis avec une centrale inertielle.<br>
 Par <span style="color:#069B23">Anthony PLACÉ</span>, <span style="color:#069B23"> Mathieu BOURGEOIS</span> et <span style="color:#069B23">Victor VATTIER</span>.
 
-![Tennid shot prediction image](https://zupimages.net/viewer.php?id=23/13/mgzr.png)
+<img src="https://zupimages.net/up/23/13/mgzr.png" alt="Alt text" title="Optional title">
 
 ## Table des matières :
 
