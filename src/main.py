@@ -3,6 +3,7 @@ import sys
 import shutil
 from timer import Timer
 import PySide6
+from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QApplication, QMainWindow
 from ui_app import Ui_mainWindow
 from imu_connetion import IMU_connection
@@ -58,6 +59,8 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
 
     window = MainWindow()
+    window.setWindowTitle("Tennis Shot Prediction")
+    window.setWindowIcon(QIcon(os.getcwd() + "/data/logo_app.png"))
     window.show()
 
     sys.exit(app.exec())

@@ -11,6 +11,7 @@ def recover_file():
     if len(file) < 1:
         print("Aucun enregistrement à prédire")
     else:
+        print(file[len(file) - 1])
         return file[len(file) - 1]
 
 
