@@ -19,6 +19,7 @@ class Plot:
         self.ax2 = None
 
     def create_charts(self):
+        plt.rcParams["toolbar"] = "None"
         plt.style.use("dark_background")
 
         for param in ['text.color', 'axes.labelcolor', 'xtick.color', 'ytick.color']:
@@ -28,10 +29,11 @@ class Plot:
             plt.rcParams[param] = '#212946'  # bluish dark grey
 
         colors = [
-            '#08F7FE',  # teal/cyan
-            '#FE53BB',  # pink
-            '#F5D300',  # yellow
-            '#00ff41',  # matrix green
+            '#DFFF4F',
+            "#CC6633",
+            '#4D9933',
+            '#FF5176',
+            '#3EFFDF'
         ]
         # Create a DataFrame
         df = pd.DataFrame({"TypeOfShots": self.typeofshots})
@@ -42,10 +44,10 @@ class Plot:
         print(shot_counts)
 
         # Création du graphique en barres
-        fig, (self.ax1, self.ax2) = plt.subplots(1, 2, figsize=(8.71, 2.11))
+        fig, (self.ax1, self.ax2) = plt.subplots(1, 2, figsize=(8.71, 4.30))
         self.ax1.bar(shot_counts.index, shot_counts.values, color=colors)
+        self.ax1.set_yticks([])
 
-        plt.title('Distribution of the different shots')
         plt.ylabel('Number of shots')
 
         # Ajout du nombre de coups sur chaque barre
@@ -54,5 +56,6 @@ class Plot:
 
         # Création du graphique circulaire
         self.ax2.pie(shot_counts.values, labels=shot_counts.index, autopct='%1.1f%%', colors=colors)
+        fig.suptitle('Répartition des coups', fontsize=18)
         plt.show()
 
