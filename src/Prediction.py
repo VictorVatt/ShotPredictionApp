@@ -20,16 +20,16 @@ class Prediction:
         self.model = model
         self.file = recover_file()
 
-    def formatFile(self, intervalle = intervalle):
+    def formatFile(self, intervale = intervalle):
         new_shot_data = pd.read_csv(f"Trials/{self.file}", skiprows=range(0,1), usecols=range(8, 14))
         new_shot_data.columns = ["AccX", "AccY", "AccZ", "GyrX", "GyrY", "GyrZ"]
         new_shot_data = new_shot_data.dropna()
         maxX = np.max(new_shot_data["AccX"])
         seuil_max = maxX * pourcentage_max / 100
         AccX_peaks = find_peaks(new_shot_data["AccX"], height=seuil_max, distance=40)
-        if (AccX_peaks[0][0]) <= intervalle:
+        if (AccX_peaks[0][0]) <= intervale:
             intervalle = (AccX_peaks[0][0])
-        if (len(new_shot_data) - AccX_peaks[0][-1]) <= intervalle:
+        if (len(new_shot_data) - AccX_peaks[0][-1]) <= intervale:
             intervalle = (len(new_shot_data) - AccX_peaks[0][-1])
         peaks = AccX_peaks[0]
         new_shot_data = createShotDF(new_shot_data, peaks)

@@ -18,7 +18,7 @@ class Model(QThread):
         Y = data["TypeOfShot"]
         X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2)
         clf = RandomForestClassifier(n_estimators=250,
-                                          criterion="entropy",
+                                          criterion="gini",
                                           max_depth=12,
                                           min_samples_split=4,
                                           min_samples_leaf=1,

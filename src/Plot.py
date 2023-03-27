@@ -16,7 +16,6 @@ class Plot():
             mapping = {0: 'Serve', 1: 'Forehand', 2: 'Backhand', 3: 'Forehand Volley', 4: 'Backhand volley'}
             self.data_shots['typeofshot'] = self.data_shots['typeofshot'].replace(mapping, regex=True)
             print(self.data_shots)
-
             chart_view = QChartView(self.create_pie_chart())
             self.ui.gridLayout.addWidget(chart_view, 0, 0, 1, 2)
             chart_view.chart().setBackgroundBrush(QBrush(QColor("transparent")))
