@@ -19,7 +19,7 @@ Par <span style="color:#069B23">Anthony PLACÉ</span>, <span style="color:#069B2
 
 <span style="color:#99A7FF">1. Cloner le projet à partir du déport github :</span>
 ```bash
-$ git clone https://github.com/username/project.git
+$ git clone https://github.com/VictorVatt/ShotPredictionApp.git
 ```
 <span style="color:#99A7FF">2. Accédez au répertoire du projet :</span>
 ```bash
